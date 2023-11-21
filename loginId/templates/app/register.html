@@ -1,0 +1,21 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block title %} Registration Page {% endblock title %}
+
+
+{% block content %}
+<div class="register-link">
+    <h1>Register here</h1>
+
+    <form method="post" action="." autocomplete="off">
+        {% csrf_token %}
+
+        {{ registerform.as_p }}
+
+        <input type="submit" value="Register" />
+    </form>
+ </div>
+{% endblock content %}
+

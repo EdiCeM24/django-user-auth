@@ -1,0 +1,21 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block title %}Login page {% endblock title %}
+
+
+{% block content %}
+   <div class="login-link">
+      <h1 style="background: gray; align-items: center; justify-content: center; padding-top: 30px; text-align: center; color: aliceblue; font-size: 30px; font-weight: bold;">Login here</h1>
+
+      <form action="." method="post" autocomplete="off" style="display: block; align-items: center; justify-content: center; margin-left: 10%; padding: 20px 5px 20px; background: khaki; width: 50%; height: 80%; margin-top: 30px; border-radius: 10px;">
+         {% csrf_token %}
+
+         {{ loginform.as_p}}
+
+         <input type="submit" value="Login" style="background: teal; color: aliceblue; display: flex; align-items: center; justify-content: center; opacity: 1; border: 2px solid red; border-radius: 30px; width: 40%; height: 30%; text-align: center; margin-left: 5%; font-size: 1.6rem; font-weight: bold;">
+      </form>
+   </div>
+{% endblock content %}
+
